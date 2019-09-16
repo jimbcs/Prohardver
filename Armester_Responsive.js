@@ -9,9 +9,9 @@
 // @include      *mobilarena.hu*
 // @include      *gamepod.hu*
 // @include      *fototrend.hu/tema*
-// @updateURL    https://raw.githubusercontent.com/jimbcs/Prohardver/master/Armester%202019%20Responsive.js
+// @updateURL    https://raw.githubusercontent.com/jimbcs/Prohardver/master/Armester_Responsive.js
 // @grant        none
-// @require      https://raw.githubusercontent.com/jimbcs/Prohardver/master/Armester%202019%20Responsive%20Update%20Prohardver.js
+// @require      https://raw.githubusercontent.com/jimbcs/Prohardver/master/Armester_Responsive_Update.js
 
 // ==/UserScript==
 (function() {
