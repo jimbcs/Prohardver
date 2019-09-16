@@ -73,7 +73,7 @@ if (panel) {
     panel.appendChild(createFormattingButton('* Egyéni arc beáll', '<p><b><i>Egyéni arcképe beállításra került. – jim bcs – 2019.xx.xx.</i></b></p>'));
     panel.appendChild(createFormattingButton('! Klón !', '<p>Üdv! <b>A Prohardver lapcsalád oldalain egy Felhasználó <i>(az Üzemeltető előzetes írásbeli engedélye nélkül)</i> egy Felhasználói Fiókkal rendelkezhet, melyet más részére nem engedhet át!</b> Egyezést találtunk xxxxxx fiókkal. Ezért érdeklődnék, melyik fiókot szeretnéd megtartani?</p>'));
     panel.appendChild(createFormattingButton('[Pontosítás!]', ' <p><a href="http://#" target="_blank" rel="noopener"><b>Pontos típus, model? Privátba kérem!</b></a></p>'));
-    panel.appendChild(createFormattingButton('[Árazhatatlan!]', '[L:http://#][B]Árazhatatlan! Összefoglaló szerint! Ne írj új hsz.-t, a pontos adatokat privátba kérem a módosításhoz![/B][/L]'));
+    panel.appendChild(createFormattingButton('[Árazhatatlan!]', '<p><a href="http://#" target="_blank" rel="noopener"><b>Árazhatatlan! Összefoglaló szerint! Ne írj új hsz.-t, a pontos adatokat privátba kérem a módosításhoz!</b></a></p>'));
     panel.appendChild(createFormattingButton('[Összefoglaló!]', '<p><a href="http://#" target="_blank" rel="noopener"><b>Légy oly kedves és az összefoglalót olvasd el, benne van amit nem szeretnénk látni a felvezetéskor és az is ahogyan szeretnénk!</b></a></p>'));
     panel.appendChild(createFormattingButtonWithQuery('[Beárazás vége]', '<p class="tac"><b><i>Az alábbi linken található beárazások elkészültek:</i></b></p>
 <p class="tac"><b><i><code><tt><a href="Add meg a hosszászólás linkjét URL." target="_blank" rel="noopener">[#68990-69223]</a></tt></code></i></b></p>
