@@ -9,8 +9,8 @@
 // @include      *mobilarena.hu*
 // @include      *gamepod.hu*
 // @include      *fototrend.hu/tema*
-// @include      /^https://(prohardver|mobilarena|gamepod|logout|itcafe)\.hu/muvelet/(hsz|privat)/(uj|modosit)\.php./
-// @include      /^https://(prohardver|mobilarena|gamepod|logout|itcafe)\.hu/muvelet/(tag|karbantart)/(tag|megjegyzes)\.php./
+// @include      https://(prohardver|mobilarena|gamepod|logout|itcafe)\.hu/muvelet/(hsz|privat)/(uj|modosit)\.php.
+// @include      https://(prohardver|mobilarena|gamepod|logout|itcafe)\.hu/muvelet/(tag|karbantart)/(tag|megjegyzes)\.php.
 // @updateURL    https://raw.githubusercontent.com/jimbcs/Prohardver/master/armester_responsive.js
 // @grant        none
 // @require      https://raw.githubusercontent.com/jimbcs/Prohardver/master/armester_responsive_update.js
