@@ -4,10 +4,10 @@
 // @description  Ármester Responsive 2019
 // @author       jim bcs
 // @include      *prohardver.hu/tema*
-// @include      *itcafe.hu/tema*
-// @include      *logout.hu/tema*
 // @include      *mobilarena.hu/tema*
 // @include      *gamepod.hu/tema*
+// @include      *logout.hu/tema*
+// @include      *itcafe.hu/tema*
 // @include      *fototrend.hu/tema*
 // @include      https://(prohardver|mobilarena|gamepod|logout|itcafe)\.hu/muvelet/(hsz|privat)/(uj|modosit)\.php.
 // @include      https://(prohardver|mobilarena|gamepod|logout|itcafe)\.hu/muvelet/(tag|karbantart)/(tag|megjegyzes)\.php.
