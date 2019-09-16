@@ -11,7 +11,7 @@
 // @include      *fototrend.hu/tema*
 // @updateURL    https://github.com/jimbcs/Prohardver/blob/master/Armester%202019%20Responsive.js
 // @grant        none
-// @require      https://github.com/jimbcs/Prohardver/blob/master/Armester%202019%20Responsive%20Update%20Prohardver.js
+// @require      https://raw.githubusercontent.com/jimbcs/Prohardver/master/Armester%202019%20Responsive%20Update%20Prohardver.js
 
 // ==/UserScript==
 (function() {
