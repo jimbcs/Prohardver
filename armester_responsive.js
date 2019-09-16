@@ -73,8 +73,6 @@ if (panel) {
     panel.appendChild(createFormattingButton('* Egyéni arc beáll', '[B][I]Egyéni arcképe beállításra került. – jim bcs – 2019.xx.xx.[/I][/B]'));
     panel.appendChild(createFormattingButton('* Egyéni arc', 'Egyéni arckép beállítva.'));
     panel.appendChild(createFormattingButton('* Új egyéni arc', 'Új egyéni arckép beállítva.'));
-    panel.appendChild(createFormattingButton('! Klón !', 'Üdv! [B]A Prohardver lapcsalád oldalain egy Felhasználó [I](az Üzemeltető előzetes írásbeli engedélye nélkül)[/I] egy Felhasználói Fiókkal rendelkezhet, melyet más részére nem engedhet át![/B] Egyezést találtunk xxxxxx fiókkal. Ezért érdeklődnék, melyik fiókot szeretnéd megtartani?'));
-    panel.appendChild(createFormattingButton('! Moderálva !', '[OFF][I][L:http://#][B][Moderálva!][/B][/L][/I][/OFF]'));
     panel.appendChild(createFormattingButton('[Pontosítás!]', ' [L:http://#][B]Pontos típus, model? Privátba kérem![/B][/L]'));
     panel.appendChild(createFormattingButton('[Árazhatatlan!]', '[L:http://#][B]Árazhatatlan! Összefoglaló szerint! Ne írj új hsz.-t, a pontos adatokat privátba kérem a módosításhoz![/B][/L]'));
     panel.appendChild(createFormattingButton('[Összefoglaló!]', '[L:http://#][B]Légy oly kedves és az összefoglalót olvasd el, benne van amit nem szeretnénk látni a felvezetéskor és az is ahogyan szeretnénk![/B][/L]'));
