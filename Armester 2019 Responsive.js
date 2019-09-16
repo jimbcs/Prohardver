@@ -3,11 +3,11 @@
 // @version      1.0
 // @description  Ármester Responsive 2019
 // @author       jim bcs
-// @include      *prohardver.hu/tema*
-// @include      *itcafe.hu/tema*
-// @include      *logout.hu/tema*
-// @include      *mobilarena.hu/tema*
-// @include      *gamepod.hu/tema*
+// @include      *prohardver.hu*
+// @include      *itcafe.hu*
+// @include      *logout.hu*
+// @include      *mobilarena.hu*
+// @include      *gamepod.hu*
 // @include      *fototrend.hu/tema*
 // @updateURL    https://raw.githubusercontent.com/jimbcs/Prohardver/master/Armester%202019%20Responsive.js
 // @grant        none
