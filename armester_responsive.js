@@ -9,6 +9,8 @@
 // @include      *logout.hu/tema*
 // @include      *itcafe.hu/tema*
 // @include      *fototrend.hu/tema*
+// @include      https://(prohardver|mobilarena|gamepod|logout|itcafe)\.hu/muvelet/(hsz|privat)/(uj|modosit)\.php.
+// @include      https://(prohardver|mobilarena|gamepod|logout|itcafe)\.hu/muvelet/(tag|karbantart)/(tag|megjegyzes)\.php.
 // @updateURL    https://raw.githubusercontent.com/jimbcs/Prohardver/master/armester_responsive.js
 // @grant        none
 // @require      https://raw.githubusercontent.com/jimbcs/Prohardver/master/armester_responsive_update.js
@@ -66,19 +68,21 @@ var panel = document.querySelector('.buttons:nth-child(4)');
 
 if (panel) {
 
-    panel.appendChild(createFormattingButton('* Mancs', '[IMG:https://prohardver.hu/dl/upc/2016-03/292543_dog_footprint-24.png][/IMG]'));
-    panel.appendChild(createFormattingButton('* Szóköz', '[IMG:https://prohardver.hu/dl/upc/2018-07/292543_194655_gray_line_3.jpg][/IMG]'));
-	panel.appendChild(createFormattingButton('* Pecsét', '[IMG:https://prohardver.hu/dl/upc/2018-04/292543_245114_jimbcs_pecset_75x75_2.png][/IMG]'));
-    panel.appendChild(createFormattingButton('* Nevezd meg', '[IMG:https://prohardver.hu/dl/upc/2016-03/292543_dog_footprint-24.png][/IMG] [B][I][L:https://prohardver.hu/tema/re_ndruu_segits_kereshetove_tenni_a_ph-s_arckepek/hsz_1-50.html]Nevezd meg az új arcképedet. Köszönjük![/L][/I][/B]'));
-    panel.appendChild(createFormattingButton('* Egyéni arc beáll', '[B][I]Egyéni arcképe beállításra került. – jim bcs – 2019.xx.xx.[/I][/B]'));
-    panel.appendChild(createFormattingButton('* Egyéni arc', 'Egyéni arckép beállítva.'));
-    panel.appendChild(createFormattingButton('* Új egyéni arc', 'Új egyéni arckép beállítva.'));
-    panel.appendChild(createFormattingButton('[Pontosítás!]', ' [L:http://#][B]Pontos típus, model? Privátba kérem![/B][/L]'));
+    panel.appendChild(createFormattingButton('* Mancs', '<p><img src="https://prohardver.hu/dl/upc/2016-03/292543_dog_footprint-24.png" alt="" /></p>'));
+    panel.appendChild(createFormattingButton('* Szóköz', '<p><img src="https://prohardver.hu/dl/upc/2018-07/292543_194655_gray_line_3.jpg" alt="" /></p>'));
+	panel.appendChild(createFormattingButton('* Pecsét', '<p><img src="https://prohardver.hu/dl/upc/2018-04/292543_245114_jimbcs_pecset_75x75_2.png" alt="" /></p>'));
+    panel.appendChild(createFormattingButton('* Nevezd meg', '<p><img src="https://prohardver.hu/dl/upc/2016-03/292543_dog_footprint-24.png" alt="" /> <b><i><a href="https://prohardver.hu/tema/re_ndruu_segits_kereshetove_tenni_a_ph-s_arckepek/hsz_1-50.html" target="_blank" rel="noopener">Nevezd meg az új arcképedet. Köszönjük!</a></i></b></p>'));
+    panel.appendChild(createFormattingButton('* Egyéni arc beáll', '<p><b><i>Egyéni arcképe beállításra került. – jim bcs – 2019.xx.xx.</i></b></p>'));
+    panel.appendChild(createFormattingButton('! Klón !', '<p>Üdv! <b>A Prohardver lapcsalád oldalain egy Felhasználó <i>(az Üzemeltető előzetes írásbeli engedélye nélkül)</i> egy Felhasználói Fiókkal rendelkezhet, melyet más részére nem engedhet át!</b> Egyezést találtunk xxxxxx fiókkal. Ezért érdeklődnék, melyik fiókot szeretnéd megtartani?</p>'));
+    panel.appendChild(createFormattingButton('[Pontosítás!]', ' <p><a href="http://#" target="_blank" rel="noopener"><b>Pontos típus, model? Privátba kérem!</b></a></p>'));
     panel.appendChild(createFormattingButton('[Árazhatatlan!]', '[L:http://#][B]Árazhatatlan! Összefoglaló szerint! Ne írj új hsz.-t, a pontos adatokat privátba kérem a módosításhoz![/B][/L]'));
-    panel.appendChild(createFormattingButton('[Összefoglaló!]', '[L:http://#][B]Légy oly kedves és az összefoglalót olvasd el, benne van amit nem szeretnénk látni a felvezetéskor és az is ahogyan szeretnénk![/B][/L]'));
-    panel.appendChild(createFormattingButtonWithQuery('[Beárazás vége]', '[P:C][B][I]Az alábbi linken található beárazások elkészültek:[/I][/B]\n[B][I][M][L:%URL%]%TITLE%[/L][/M][/I][/B]\n[OFF]Az árak a hozzászólásaitokba vannak szerkesztve.[/OFF][/P]',
-                                                  'Add meg a hozzászólások linkjét!'));
-    panel.appendChild(createFormattingButton('[Beárazva 2018]', ' [P:C][IMG:https://prohardver.hu/dl/upc/2018-02/292543_jim_bcs_2.png][/IMG][/P]'));
-    panel.appendChild(createFormattingButton('[~Ár]', ' [L:http://#][B]~', 'k[/B][/L]'));
+    panel.appendChild(createFormattingButton('[Összefoglaló!]', '<p><a href="http://#" target="_blank" rel="noopener"><b>Légy oly kedves és az összefoglalót olvasd el, benne van amit nem szeretnénk látni a felvezetéskor és az is ahogyan szeretnénk!</b></a></p>'));
+    panel.appendChild(createFormattingButtonWithQuery('[Beárazás vége]', '<p class="tac"><b><i>Az alábbi linken található beárazások elkészültek:</i></b></p>
+<p class="tac"><b><i><code><tt><a href="Add meg a hosszászólás linkjét URL." target="_blank" rel="noopener">[#68990-69223]</a></tt></code></i></b></p>
+<p class="tac"><small>Az árak a hozzászólásaitokba vannak szerkesztve.</small></p>
+<p></p>
+<p class="tac"><img src="https://prohardver.hu/dl/upc/2018-02/292543_jim_bcs_2.png" alt="" /></p>'));
+    panel.appendChild(createFormattingButton('[Beárazva 2018]', ' <p class="tac"><img src="https://prohardver.hu/dl/upc/2018-02/292543_jim_bcs_2.png" /></p>'));
+    panel.appendChild(createFormattingButton('[~Ár]', ' <p><a href="http://#" target="_blank" rel="noopener"><b>~k</b></a></p>'));
     }
 })();
