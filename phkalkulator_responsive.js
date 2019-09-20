@@ -1,6 +1,5 @@
 // ==UserScript==
 // @name         PH! kalkulátor
-// @namespace    http://prohardver.hu/tag/ursache.html
 // @version      0.4
 // @description  A felhasználói adatlapokon kiszámolódik a következő ranghoz szükséges HSZ-ek száma, és a következő rang is.
 // @author       jim bcs
