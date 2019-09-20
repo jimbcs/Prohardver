@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         PH! Adatlap Tg. Responsive 2019
 // @version      1.0
-// @description  Topikgazdák adatlapján megjelennek a topikjaik
+// @description  Topikgazdák adatlapján megjelennek a topikjaik.
 // @author       jim bcs
 // @include      *prohardver.hu/tag*
 // @include      *itcafe.hu/tag*
