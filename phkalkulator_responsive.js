@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         PH! kalkulátor
+// @name         PH! Kalkulátor Responsive 2019
 // @version      1.0
 // @description  A felhasználói adatlapokon kiszámolódik a következő ranghoz szükséges HSZ-ek száma, és a következő rang is.
 // @author       jim bcs
