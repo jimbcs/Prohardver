@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         PH! adatlap TG
+// @name         PH! adatlap TG Responsive 2019
 // @version      1.0
 // @description  Topikgazdák adatlapján megjelennek a topikjaik
 // @author       jim bcs
