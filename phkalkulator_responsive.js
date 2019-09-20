@@ -17,11 +17,11 @@ const hatarok = [0, 50, 100, 200, 400, 800, 1750, 3500, 6000, 10000, 17000, 2500
 const napok = [0, 15, 30, 60, 100, 180, 270, 365, 450, 600, 850, 1100];
 
 //A regnapokat egyszerűbb "lekérni" reguláris kifejezéssel
-const pattern = /, azaz [0-9]+ napja - /;
+const pattern = /, azaz ([0-9]+) napja - /;
 
 var sulyozott = getWeightedComment();
 var result = document.body.textContent.match(pattern);
-var regnapok = parseInt(result[result.length-1].split(' ')[2]);
+var regnapok = parseInt(result[1]);
 
 var j;
 for (j = 0; sulyozott >= hatarok[j] && j < hatarok.length; j++);
@@ -41,17 +41,17 @@ var div = document.createElement("div");
 div.innerHTML = rang_header;
 div.innerHTML += rang_p;
 div.innerHTML += nap_p;
-//document.body.childNodes[1].childNodes[1].appendChild(div);
-document.getElementsByClassName("full inline center")[0].appendChild(div);
+document.querySelector("div.card-body").appendChild(div);
 
 function getWeightedComment()
 {
-    var as = document.getElementsByClassName("tiny");
-    var szakmai = parseInt(as[0].childNodes[3].textContent);
+    var rx = /(\d*) szakmai, (\d*) közösségi, (\d*) piaci, (\d*) blog és lokál/;
+    var as = document.querySelector("div.card-body > table > tbody > tr:nth-child(8) > td").textContent.match(rx);
+    var szakmai = parseInt(as[1]);
     szakmai = isNaN(szakmai)? 0 : szakmai;
-    var kozossegi = parseInt(as[1].childNodes[3].textContent);
+    var kozossegi = parseInt(as[2]);
     kozossegi = isNaN(kozossegi)? 0 : kozossegi;
-    var piaci = parseInt(as[2].childNodes[3].textContent);
+    var piaci = parseInt(as[3]);
     piaci = isNaN(piaci)? 0 : piaci;
     return parseInt(szakmai_suly * szakmai + kozossegi_suly * kozossegi + piaci_suly * piaci);
 }
