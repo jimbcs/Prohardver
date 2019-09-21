@@ -3,7 +3,7 @@
 // @version      1.0
 // @description  A felhasználói adatlapokon kiszámolódik a következő ranghoz szükséges HSZ-ek száma, és a következő rang is.
 // @author       jim bcs
-// @include      /^https://(prohardver|itcafe|gamepod|logout|mobilarena)\.hu/tag/*/
+// @include      /^https://(prohardver|itcafe|gamepod|logout|mobilarena|fototrend)\.hu/tag/*/
 // ==/UserScript==
 
 //PH! által megadott súlyok
