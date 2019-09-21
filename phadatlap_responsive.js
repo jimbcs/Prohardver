@@ -8,6 +8,7 @@
 // @include      *logout.hu/tag*
 // @include      *mobilarena.hu/tag*
 // @include      *gamepod.hu/tag*
+// @include      *fototrend.hu/tag*
 // @updateURL    https://raw.githubusercontent.com/RDornodon/Prohardver/patch-3/phadatlap_responsive.js
 // @grant        none
 // ==/UserScript==
