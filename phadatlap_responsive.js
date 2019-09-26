@@ -42,7 +42,8 @@
     {
         var parser=new DOMParser();
         var htmlDoc=parser.parseFromString(oReq.responseText, "text/html");
-        var body = htmlDoc.querySelector("div.msg-content").getElementsByTagName("P")
+        var msgbody = htmlDoc.querySelector("div.msg-content, div#msg1.msg.flc > div.text");
+        var body = msgbody.getElementsByTagName("P");
         for (var i = 0; i < body.length; ++i)
         {
             var links = body[i].getElementsByTagName("A");
