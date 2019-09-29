@@ -15,16 +15,8 @@
 (function() {
     'use strict';
 
-    var re = /(www\.)?(m\.)?(prohardver|mobilarena|gamepod|itcafe)\.hu\/tag\//g;
-
-    if (window.location.href.match(re) !== null)
-    {
-        // hack: Same Origin Policy miatt at kell iranyitani az adatlapot Logoutra.
-        window.location.href = window.location.href.replace(re, "logout.hu/tag/");
-        return;
-    }
-
-    var username = document.forms[0].getElementsByTagName("H1")[0].textContent;
+    var re = /tag\/([^.]+).html(\?cpt_code=.+)?$/;
+    var username = document.baseURI.match(re)[1];
 
     var form = document.forms[0];
     var toBefore = form.nextSibling;
@@ -50,19 +42,20 @@
     {
         var parser=new DOMParser();
         var htmlDoc=parser.parseFromString(oReq.responseText, "text/html");
-        var body = htmlDoc.getElementsByClassName("defcnt cntnew")[0].children;
+        var msgbody = htmlDoc.querySelector("div.msg-content, div#msg1.msg.flc > div.text");
+        var body = msgbody.getElementsByTagName("P");
         for (var i = 0; i < body.length; ++i)
         {
-            var par = body[i];
-            var links = par.getElementsByTagName("A");
-            if (links.length < 2)
+            var links = body[i].getElementsByTagName("A");
+            if (links && links.length < 2)
                 continue;
 
-            var actualUser = links[0].textContent.trim();
-            if (actualUser !== username)
+            var re = /tag\/([^.]+).html(\?cpt_code=.+)?$/;
+            var actualUser = links[0].href.match(re)
+            if (!actualUser || actualUser[1] !== username)
                 continue;
 
-            var clone = par.cloneNode(true);
+            var clone = body[i].cloneNode(true);
 
             while (clone.childNodes[0].textContent[0] !== "●")
                 clone.removeChild(clone.firstChild);
@@ -70,11 +63,12 @@
             addItem(document.createElement("hr"));
             addItemInP("<b>Topikgazda</b>");
             addItem(clone);
+            break;
         }
     };
 
     // hack: sync lekeres, hogy a link atiranyito script bevarja ezt.
-    oReq.open("GET", "/bejegyzes/rios_gephaz/topikgazdak.html", false);
+    oReq.open("GET", "/tema/topikgazdak_es_topikjaik/hsz_1-1.html", false);
     oReq.send();
 
 })();
