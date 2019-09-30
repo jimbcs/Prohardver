@@ -46,12 +46,17 @@ document.querySelector("div.card-body").appendChild(div);
 function getWeightedComment()
 {
     var rx = /(\d*) szakmai, (\d*) közösségi, (\d*) piaci, (\d*) blog és lokál/;
-    var as = document.querySelector("div.card-body > table > tbody > tr:nth-child(8) > td").textContent.match(rx);
-    var szakmai = parseInt(as[1]);
-    szakmai = isNaN(szakmai)? 0 : szakmai;
-    var kozossegi = parseInt(as[2]);
-    kozossegi = isNaN(kozossegi)? 0 : kozossegi;
-    var piaci = parseInt(as[3]);
-    piaci = isNaN(piaci)? 0 : piaci;
-    return parseInt(szakmai_suly * szakmai + kozossegi_suly * kozossegi + piaci_suly * piaci);
+    var allTD = document.querySelector("div.card-body > table > tbody").getElementsByTagName("TD");
+    for (var i = 0; i < allTD.length; ++i)
+    {
+        var as = allTD[i].textContent.match(rx);
+        if (!as) continue;
+        var szakmai = parseInt(as[1]);
+        szakmai = isNaN(szakmai)? 0 : szakmai;
+        var kozossegi = parseInt(as[2]);
+        kozossegi = isNaN(kozossegi)? 0 : kozossegi;
+        var piaci = parseInt(as[3]);
+        piaci = isNaN(piaci)? 0 : piaci;
+        return parseInt(szakmai_suly * szakmai + kozossegi_suly * kozossegi + piaci_suly * piaci);
+    }
 }
