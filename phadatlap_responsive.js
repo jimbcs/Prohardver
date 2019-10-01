@@ -2,7 +2,7 @@
 // @name         PH! Adatlap Tg. Responsive 2019
 // @version      1.0
 // @description  Topikgazdák adatlapján megjelennek a topikjaik.
-// @author       jim bcs
+// @author       jim bcs & sztanozs
 // @include      *prohardver.hu/tag*
 // @include      *itcafe.hu/tag*
 // @include      *logout.hu/tag*
