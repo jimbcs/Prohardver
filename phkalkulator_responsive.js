@@ -115,11 +115,11 @@ if (nextRanks)
     {
         var pr = nextRanks[iy][0] - sulyozott;
         var tr = nextRanks[iy][1] - regnapok;
-        s += '<br>';
-        s += pr > 0 ? '<b>' + pr + '</b> hozzászólás' : '';
+        s += '<br><small>';
+        s += pr > 0 ? '</small><b>' + pr + '</b><small> súlyozott hozzászólás' : '';
         s += pr > 0 && tr > 0 ? ' és ' :'';
-        s += tr > 0 ? '<b>' + tr + '</b> nap': '';
-        s += pr > 0 || tr > 0 ? ' hiányzik a(z) <b>'+ nextRanks[iy][2] + '</b> ranghoz.':'';
+        s += tr > 0 ? '</small><b>' + tr + '</b><small> nap': '';
+        s += pr > 0 || tr > 0 ? ' hiányzik a(z) </small><b>'+ nextRanks[iy][2] + '</b><small> ranghoz.':'';
     }
 }
 else{
