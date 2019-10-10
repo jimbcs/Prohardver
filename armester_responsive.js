@@ -39,7 +39,11 @@
         button.setAttribute('type', 'button');
         button.setAttribute('value', title);
         button.onclick = function() {
-            tinyMCE.activeEditor.execCommand('mceInsertContent', !1, content);
+            tinyMCE.activeEditor.selection.setContent(content);
+            var tnode = tinyMCE.activeEditor.dom.select("b._cursor")[0];
+            tinyMCE.activeEditor.selection.select(tnode);
+            tinyMCE.activeEditor.selection.collapse(true);
+            tinyMCE.activeEditor.dom.removeAllAttribs(tnode);
         };
         return button;
     }
@@ -91,7 +95,7 @@
                                                                   <p></p>
                                                                   <p class="tac"><img src="https://prohardver.hu/dl/upc/2018-02/292543_jim_bcs_2.png" alt="" /></p>`, 'Add meg a hosszászólás linkjét (URL)'));
                 panel.appendChild(createFormattingButton('Beárazva 2018', ' <p class="tac"><img src="https://prohardver.hu/dl/upc/2018-02/292543_jim_bcs_2.png" /></p>'));
-                panel.appendChild(createFormattingButton('~Ár', ' <p><a href="http://#" target="_blank" rel="noopener"><b>~k</b></a></p>'));
+                panel.appendChild(createFormattingButton('~Ár', ' <p><a href="http://#" target="_blank" rel="noopener"><b>~</b><b class="_cursor">k</b></a></p>'));
             }
         }
     }, 1000);
