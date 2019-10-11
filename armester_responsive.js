@@ -29,6 +29,7 @@
         }
     }
 
+    // Your code here...
     function createMarker() {
         var domelement = document.createElement('div');
         domelement.setAttribute('id', 'jimbcsmarker');
