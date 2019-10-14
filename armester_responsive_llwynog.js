@@ -80,16 +80,17 @@
             if (!jimbcsmarker)
             {
                 panel.appendChild(createMarker());
-                panel.appendChild(createFormattingButtonWithQuery('Beárazás vége',
-                                                                  `<p class="tac"><b><i>Az alábbi linken található beárazások elkészültek:</i></b></p>
-                                                                  <p class="tac"><b><i><code><tt><a href="%URL%" target="_blank" rel="noopener">%TITLE%</a></tt></code></i></b></p>
-                                                                  <p class="tac"><small>Az árak a hozzászólásaitokba vannak szerkesztve.</small></p>
-                                                                  <p></p>
-                                                                  <p class="tac"><img src="https://prohardver.hu/dl/upc/2018-07/292543_llwynog.png" alt="" /></p>`, 'Add meg a hosszászólás linkjét (URL)'));
-                panel.appendChild(createFormattingButton('Beárazva 2018', ' <p class="tac"><img src="https://prohardver.hu/dl/upc/2018-07/292543_llwynog.png" /></p>'));
-	            panel.appendChild(createFormattingButton('Pontosítás!', ' <a href="http://#" target="_blank" rel="noopener"><b>Pontos típus, model? Privátba kérem!</b></a></p>'));
+                panel.appendChild(createFormattingButton('Pontosítás!', '<a href="http://#" target="_blank" rel="noopener"><b>Pontos típus, model? Privátba kérem!</b></a>'));
+                panel.appendChild(createFormattingButton('Árazhatatlan!', '<p><a href="http://#" target="_blank" rel="noopener"><b>Árazhatatlan! Összefoglaló szerint! Ne írj új hsz.-t, a pontos adatokat privátba kérem a módosításhoz!</b></a></p>'));
                 panel.appendChild(createFormattingButton('Összefoglaló!', '<p><a href="http://#" target="_blank" rel="noopener"><b>Légy oly kedves és az összefoglalót olvasd el, benne van amit nem szeretnénk látni a felvezetéskor és az is ahogyan szeretnénk!</b></a></p>'));
-                panel.appendChild(createFormattingButton('~Ár', ' <a href="http://#" target="_blank" rel="noopener"><b>~k</b></a></p>'));
+                panel.appendChild(createFormattingButtonWithQuery('Beárazás vége',
+                                                                  '<p class="tac"><b><i>Az alábbi linken található beárazások elkészültek:</i></b></p>'+
+                                                                  '<p class="tac"><b><i><code><tt><a href="%URL%" target="_blank" rel="noopener">%TITLE%</a></tt></code></i></b></p>'+
+                                                                  '<p class="tac"><small>Az árak a hozzászólásaitokba vannak szerkesztve.</small></p>'+
+                                                                  '<p></p>'+
+                                                                  '<p class="tac"><img src="https://prohardver.hu/dl/upc/2018-07/292543_llwynog.png" alt="" /></p>', 'Add meg a hosszászólás linkjét (URL)'));
+                panel.appendChild(createFormattingButton('Beárazva 2018', '<p class="tac"><img src="https://prohardver.hu/dl/upc/2018-07/292543_llwynog.png" /></p>'));
+                panel.appendChild(createFormattingButton('~Ár', '<a href="http://#" target="_blank" rel="noopener"><b>~<b class="_cursor">k</b></a>'));
             }
         }
     }, 1000);
