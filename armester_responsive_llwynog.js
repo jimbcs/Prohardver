@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Ármester Responsive 2019
-// @version      1.0
+// @version      2.0
 // @description  Ármester Responsive 2019
 // @author       jim bcs
 // @include      *prohardver.hu/tema*
@@ -9,6 +9,7 @@
 // @include      *logout.hu/tema*
 // @include      *itcafe.hu/tema*
 // @include      *fototrend.hu/tema*
+// @include      /^http(s)?://(itcafe|prohardver|mobilarena|fototrend)\.hu/(tema|privat)/
 // @updateURL    https://raw.githubusercontent.com/jimbcs/Prohardver/master/armester_responsive.js
 // @grant        none
 // @require      https://raw.githubusercontent.com/jimbcs/Prohardver/master/armester_responsive_update.js
@@ -22,12 +23,13 @@
     var thrUsers = document.getElementById("right").getElementsByClassName(tgDiv)[0];
     if (thrUsers) {
         var thrList = thrUsers.getElementsByTagName("ul")[0];
+        var num = thrList.children.length - 1;
 
         while (thrList.firstChild) {
             thrList.removeChild(thrList.firstChild);
         }
     }
-    // Your code here...
+
     function createMarker() {
         var domelement = document.createElement('div');
         domelement.setAttribute('id', 'jimbcsmarker');
@@ -39,7 +41,11 @@
         button.setAttribute('type', 'button');
         button.setAttribute('value', title);
         button.onclick = function() {
-            tinyMCE.activeEditor.execCommand('mceInsertContent', !1, content);
+            tinyMCE.activeEditor.selection.setContent(content);
+            var tnode = tinyMCE.activeEditor.dom.select("b._cursor")[0];
+            tinyMCE.activeEditor.selection.select(tnode);
+            tinyMCE.activeEditor.selection.collapse(true);
+            tinyMCE.activeEditor.dom.removeAllAttribs(tnode);
         };
         return button;
     }
@@ -61,7 +67,6 @@
             if (match) {
                 linkTitle = '[#' + match + ']'
             }
-
             tinyMCE.activeEditor.execCommand('mceInsertContent', !1, format.replace('%URL%', url).replace('%TITLE%', linkTitle));
         };
 
@@ -81,7 +86,7 @@
                                                                   <p class="tac"><small>Az árak a hozzászólásaitokba vannak szerkesztve.</small></p>
                                                                   <p></p>
                                                                   <p class="tac"><img src="https://prohardver.hu/dl/upc/2018-07/292543_llwynog.png" alt="" /></p>`, 'Add meg a hosszászólás linkjét (URL)'));
-                panel.appendChild(createFormattingButton('Beárazva!', ' <p class="tac"><img src="https://prohardver.hu/dl/upc/2018-07/292543_llwynog.png" /></p>'));
+                panel.appendChild(createFormattingButton('Beárazva 2018', ' <p class="tac"><img src="https://prohardver.hu/dl/upc/2018-07/292543_llwynog.png" /></p>'));
 	            panel.appendChild(createFormattingButton('Pontosítás!', ' <a href="http://#" target="_blank" rel="noopener"><b>Pontos típus, model? Privátba kérem!</b></a></p>'));
                 panel.appendChild(createFormattingButton('Összefoglaló!', '<p><a href="http://#" target="_blank" rel="noopener"><b>Légy oly kedves és az összefoglalót olvasd el, benne van amit nem szeretnénk látni a felvezetéskor és az is ahogyan szeretnénk!</b></a></p>'));
                 panel.appendChild(createFormattingButton('~Ár', ' <a href="http://#" target="_blank" rel="noopener"><b>~k</b></a></p>'));
