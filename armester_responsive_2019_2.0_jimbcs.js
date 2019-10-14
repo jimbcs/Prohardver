@@ -6,7 +6,7 @@
 // @include      /^http(s)?://(itcafe|prohardver|mobilarena|fototrend)\.hu/(tema|privat)/
 // @updateURL    https://raw.githubusercontent.com/jimbcs/Prohardver/master/armester_responsive_2019_2.0_jimbcs.js
 // @grant        none
-// @require      https://raw.githubusercontent.com/jimbcs/Prohardver/master/armester_responsive_update.js
+// @require      https://raw.githubusercontent.com/jimbcs/Prohardver/master/armester_responsive_2019_2.0_jimbcs_update.js
 
 // ==/UserScript==
 (function() {
