@@ -11,7 +11,6 @@
 // @include      *itcafe.hu/tema*
 // @include      *fototrend.hu/tema*
 // @include      /^http(s)?://(itcafe|prohardver|mobilarena|fototrend)\.hu/(tema|privat)/
-// @include      /^http(s)?://(itcafe|prohardver|mobilarena|fototrend)\.hu/(muvelet)/(tag|karbantart)/(tag|megjegyzes)/
 // @match        *://*/*
 // @grant        none
 // ==/UserScript==
