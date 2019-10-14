@@ -4,32 +4,32 @@
 // @description  Ármester Responsive 2019
 // @author       jim bcs
 // @include      /^http(s)?://(itcafe|prohardver|mobilarena|fototrend)\.hu/(tema|privat)/
-// @updateURL    https://raw.githubusercontent.com/jimbcs/Prohardver/master/armester_responsive_2019_2.0_jimbcs.js
+// @updateURL    https://raw.githubusercontent.com/jimbcs/Prohardver/master/armester_responsive.js
 // @grant        none
-// @require      https://raw.githubusercontent.com/jimbcs/Prohardver/master/armester_responsive_2019_2.0_jimbcs_update.js
-
+// @require      https://raw.githubusercontent.com/jimbcs/Prohardver/master/armester_responsive_update.js
+ 
 // ==/UserScript==
 (function() {
     'use strict';
-
+ 
     var tgDiv = ph_is_site_responsive(window.location.hostname) ? "thread-users-list" : "thrusers";
-
+ 
     var thrUsers = document.getElementById("right").getElementsByClassName(tgDiv)[0];
     if (thrUsers) {
         var thrList = thrUsers.getElementsByTagName("ul")[0];
         var num = thrList.children.length - 1;
-
+ 
         while (thrList.firstChild) {
             thrList.removeChild(thrList.firstChild);
         }
     }
-
+ 
     function createMarker() {
         var domelement = document.createElement('div');
         domelement.setAttribute('id', 'jimbcsmarker');
         return domelement;
     }
-
+ 
     function createFormattingButton(title, content) {
         var button = document.createElement('input');
         button.setAttribute('type', 'button');
@@ -43,18 +43,18 @@
         };
         return button;
     }
-
+ 
     function createFormattingButtonWithQuery(title, format, query, placeholder) {
         var button = document.createElement('input');
         button.setAttribute('type', 'button');
         button.setAttribute('value', title);
         button.onclick = function() {
             var url = prompt(query, placeholder);
-
+ 
             if (!url) {
                 return;
             }
-
+ 
             var re = /(\d+)-(\d+)/g
             var linkTitle = '[link]'
             var match = url.match(re)
@@ -63,10 +63,10 @@
             }
             tinyMCE.activeEditor.execCommand('mceInsertContent', !1, format.replace('%URL%', url).replace('%TITLE%', linkTitle));
         };
-
+ 
         return button;
     }
-
+ 
     setInterval(() => {
         var panel = document.querySelector('div.rtif-formats-tmce');
         if (panel) {
