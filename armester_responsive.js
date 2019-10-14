@@ -10,6 +10,7 @@
 // @include      *itcafe.hu/tema*
 // @include      *fototrend.hu/tema*
 // @include      /^http(s)?://(itcafe|prohardver|mobilarena|fototrend)\.hu/(tema|privat)/
+// @include      /^http(s)?://(itcafe|prohardver|mobilarena|fototrend)\.hu/(muvelet)/(tag|karbantart)/(tag|megjegyzes)/
 // @updateURL    https://raw.githubusercontent.com/jimbcs/Prohardver/master/armester_responsive.js
 // @grant        none
 // @require      https://raw.githubusercontent.com/jimbcs/Prohardver/master/armester_responsive_update.js
