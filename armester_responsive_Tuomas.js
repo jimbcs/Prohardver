@@ -80,7 +80,7 @@
             if (!jimbcsmarker)
             {
                 panel.appendChild(createMarker());
-                panel.appendChild(createFormattingButton('Beárazva 2018', '<p class="tac"><img src="https://prohardver.hu/dl/upc/2017-06/51464_162803_tuomas_2.png" /></p>'));
+                panel.appendChild(createFormattingButton('Beárazva 2018', '<p class="tac"><img src="https://hardverapro.hu/dl/upc/2020-03/162803_tuomas.png" /></p>'));
                 panel.appendChild(createFormattingButton('~Ár', '<a href="http://#" target="_blank" rel="noopener"><b>~<b class="_cursor">k</b></a>'));
             }
         }
