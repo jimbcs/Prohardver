@@ -89,7 +89,7 @@
                                                                   '<p class="tac"><small>Az árak a hozzászólásaitokba vannak szerkesztve.</small></p>'+
                                                                   '<p></p>'+
                                                                   '<p class="tac"><img src="https://hardverapro.hu/dl/upc/2020-08/162803_symbiote_2.png" alt="" /></p>', 'Add meg a hosszászólás linkjét (URL)'));
-                panel.appendChild(createFormattingButton('Beárazva 2018', '<p class="tac"><img src="https://prohardver.hu/dl/upc/2018-07/292543_llwynog.png" /></p>'));
+                panel.appendChild(createFormattingButton('Beárazva 2018', '<p class="tac"><img src="https://hardverapro.hu/dl/upc/2020-08/162803_symbiote_2.png" /></p>'));
                 panel.appendChild(createFormattingButton('~Ár', '<a href="http://#" target="_blank" rel="noopener"><b>~<b class="_cursor">k</b></a>'));
             }
         }
