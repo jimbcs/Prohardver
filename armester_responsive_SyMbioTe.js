@@ -18,15 +18,17 @@
 (function() {
     'use strict';
 
-    var tgDiv = ph_is_site_responsive(window.location.hostname) ? "thread-users-list" : "thrusers";
+     var tgDiv = ph_is_site_responsive(window.location.hostname) ? "thread-users-list" : "thrusers";
 
     var thrUsers = document.getElementById("right").getElementsByClassName(tgDiv)[0];
     if (thrUsers) {
         var thrList = thrUsers.getElementsByTagName("ul")[0];
-        var num = thrList.children.length - 1;
+        if (thrList) {
+            var num = thrList.children.length - 1;
 
-        while (thrList.firstChild) {
-            thrList.removeChild(thrList.firstChild);
+            while (thrList.firstChild) {
+                thrList.removeChild(thrList.firstChild);
+            }
         }
     }
 
