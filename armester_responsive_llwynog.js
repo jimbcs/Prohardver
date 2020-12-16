@@ -23,10 +23,12 @@
     var thrUsers = document.getElementById("right").getElementsByClassName(tgDiv)[0];
     if (thrUsers) {
         var thrList = thrUsers.getElementsByTagName("ul")[0];
-        var num = thrList.children.length - 1;
+        if (thrList) {
+            var num = thrList.children.length - 1;
 
-        while (thrList.firstChild) {
-            thrList.removeChild(thrList.firstChild);
+            while (thrList.firstChild) {
+                thrList.removeChild(thrList.firstChild);
+            }
         }
     }
 
