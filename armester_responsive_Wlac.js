@@ -18,15 +18,17 @@
 (function() {
     'use strict';
 
-    var tgDiv = ph_is_site_responsive(window.location.hostname) ? "thread-users-list" : "thrusers";
+     var tgDiv = ph_is_site_responsive(window.location.hostname) ? "thread-users-list" : "thrusers";
 
     var thrUsers = document.getElementById("right").getElementsByClassName(tgDiv)[0];
     if (thrUsers) {
         var thrList = thrUsers.getElementsByTagName("ul")[0];
-        var num = thrList.children.length - 1;
+        if (thrList) {
+            var num = thrList.children.length - 1;
 
-        while (thrList.firstChild) {
-            thrList.removeChild(thrList.firstChild);
+            while (thrList.firstChild) {
+                thrList.removeChild(thrList.firstChild);
+            }
         }
     }
 
@@ -80,8 +82,8 @@
             if (!jimbcsmarker)
             {
                 panel.appendChild(createMarker());
-                panel.appendChild(createFormattingButton('Beárazva!', ' <p class="tac"><img src="https://prohardver.hu/dl/upc/2019-10/292543_wlac.png" /></p>'));
-                panel.appendChild(createFormattingButton('~Ár', ' <a href="http://#" target="_blank" rel="noopener"><b>~k</b></a></p>'));
+                panel.appendChild(createFormattingButton('Beárazva 2018', '<p class="tac"><img src="https://prohardver.hu/dl/upc/2019-10/292543_wlac.png" /></p>'));
+                panel.appendChild(createFormattingButton('~Ár', '<a href="http://#" target="_blank" rel="noopener"><b>~<b class="_cursor">k</b></a>'));
             }
         }
     }, 1000);
