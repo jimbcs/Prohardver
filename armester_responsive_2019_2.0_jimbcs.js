@@ -33,12 +33,15 @@
     var thrUsers = document.getElementById("right").getElementsByClassName(tgDiv)[0];
     if (thrUsers) {
         var thrList = thrUsers.getElementsByTagName("ul")[0];
-        var num = thrList.children.length - 1;
+        if (thrList) {
+            var num = thrList.children.length - 1;
 
-        while (thrList.firstChild) {
-            thrList.removeChild(thrList.firstChild);
+            while (thrList.firstChild) {
+                thrList.removeChild(thrList.firstChild);
+            }
         }
     }
+
 
     function createMarker() {
         var domelement = document.createElement('div');
@@ -91,10 +94,10 @@
             {
                 panel.appendChild(createMarker());
                 panel.appendChild(createFormattingButton('* Mancs', '<p><img src="https://prohardver.hu/dl/upc/2016-03/292543_dog_footprint-24.png" alt="" /></p>'));
-                panel.appendChild(createFormattingButton('* Szóköz', '<p><img src="https://prohardver.hu/dl/upc/2018-07/292543_194655_gray_line_3.jpg" alt="" /></p>'));
                 panel.appendChild(createFormattingButton('* Pecsét', '<p><img src="https://prohardver.hu/dl/upc/2018-04/292543_245114_jimbcs_pecset_75x75_2.png" alt="" /></p>'));
+                panel.appendChild(createFormattingButton('* Szóköz', '<p><img src="https://prohardver.hu/dl/upc/2018-07/292543_194655_gray_line_3.jpg" alt="" /></p>'));
+                panel.appendChild(createFormattingButton('* Egyéni arc beáll', '<p><b><i>Egyéni arcképe beállításra került. – jim bcs – 2020.xx.xx.</i></b></p>'));
                 panel.appendChild(createFormattingButton('* Nevezd meg', '<p><img src="https://prohardver.hu/dl/upc/2016-03/292543_dog_footprint-24.png" alt="" /> <b><i><a href="https://prohardver.hu/tema/re_ndruu_segits_kereshetove_tenni_a_ph-s_arckepek/hsz_1-50.html" target="_blank" rel="noopener">Nevezd meg az új arcképedet. Köszönjük!</a></i></b></p>'));
-                panel.appendChild(createFormattingButton('* Egyéni arc beáll', '<p><b><i>Egyéni arcképe beállításra került. – jim bcs – 2019.xx.xx.</i></b></p>'));
                 panel.appendChild(createFormattingButton('* Egyéni arc', '<p><b><i>Egyéni arckép beállítva.'));
                 panel.appendChild(createFormattingButton('* Új egyéni arc', '<p><b><i>Új egyéni arckép beállítva.'));
                 panel.appendChild(createFormattingButton('! Klón !', '<p>Üdv! <b>A Prohardver lapcsalád oldalain egy Felhasználó <i>(az Üzemeltető előzetes írásbeli engedélye nélkül)</i> egy Felhasználói Fiókkal rendelkezhet, melyet más részére nem engedhet át!</b> Egyezést találtunk xxxxxx fiókkal. Ezért érdeklődnék, melyik fiókot szeretnéd megtartani?</p>'));
