@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         Ármester Responsive 2019
+// @name         Ármester Responsive
 // @version      2.0
 // @description  Ármester Responsive 2019
 // @author       jim bcs
@@ -9,7 +9,17 @@
 // @include      *logout.hu/tema*
 // @include      *itcafe.hu/tema*
 // @include      *fototrend.hu/tema*
+// @include      *https://prohardver.hu/muvelet/tag/megjegyzes*
+// @include      *https://itcafe.hu/muvelet/tag/megjegyzes*
+// @include      *https://mobilarena.hu/muvelet/tag/megjegyzes*
+// @include      *https://fototrend.hu/muvelet/tag/megjegyzes*
+// @include      *https://prohardver.hu/muvelet/tag/megjegyzes*
+// @include      *https://itcafe.hu/muvelet/tag/megjegyzes*
+// @include      *https://mobilarena.hu/muvelet/tag/megjegyzes*
+// @include      *https://fototrend.hu/muvelet/tag/megjegyzes*
 // @include      /^http(s)?://(itcafe|prohardver|mobilarena|fototrend)\.hu/(tema|privat)/
+// @include      /^http(s)?://(itcafe|prohardver|mobilarena|fototrend)\.hu/(muvelet)/(tag|karbantart)/(tag|megjegyzes)/
+// @include      /^http(s)?:\/\/(itcafe|prohardver|mobilarena|fototrend)\.hu\/(muvelet)\/(tag|karbantart)\/(tag|megjegyzes)\/
 // @updateURL    https://raw.githubusercontent.com/jimbcs/Prohardver/master/armester_responsive.js
 // @grant        none
 // @require      https://raw.githubusercontent.com/jimbcs/Prohardver/master/armester_responsive_update.js
@@ -31,6 +41,7 @@
             }
         }
     }
+
 
     function createMarker() {
         var domelement = document.createElement('div');
@@ -82,7 +93,15 @@
             if (!jimbcsmarker)
             {
                 panel.appendChild(createMarker());
-                panel.appendChild(createFormattingButton('Pontosítás!', '<a href="http://#" target="_blank" rel="noopener"><b>Pontos típus, model? Privátba kérem!</b></a>'));
+                panel.appendChild(createFormattingButton('* Mancs', '<p><img src="https://prohardver.hu/dl/upc/2016-03/292543_dog_footprint-24.png" alt="" /></p>'));
+                panel.appendChild(createFormattingButton('* Pecsét', '<p><img src="https://prohardver.hu/dl/upc/2018-04/292543_245114_jimbcs_pecset_75x75_2.png" alt="" /></p>'));
+                panel.appendChild(createFormattingButton('* Szóköz', '<p><img src="https://prohardver.hu/dl/upc/2018-07/292543_194655_gray_line_3.jpg" alt="" /></p>'));
+                panel.appendChild(createFormattingButton('* Egyéni arc beáll', '<p><b><i>Egyéni arcképe beállításra került. – jim bcs – 2020.xx.xx.</i></b></p>'));
+                panel.appendChild(createFormattingButton('* Nevezd meg', '<p><img src="https://prohardver.hu/dl/upc/2016-03/292543_dog_footprint-24.png" alt="" /> <b><i><a href="https://prohardver.hu/tema/re_ndruu_segits_kereshetove_tenni_a_ph-s_arckepek/hsz_1-50.html" target="_blank" rel="noopener">Nevezd meg az új arcképedet. Köszönjük!</a></i></b></p>'));
+                panel.appendChild(createFormattingButton('* Egyéni arc', '<p><b><i>Egyéni arckép beállítva.'));
+                panel.appendChild(createFormattingButton('* Új egyéni arc', '<p><b><i>Új egyéni arckép beállítva.'));
+                panel.appendChild(createFormattingButton('! Klón !', '<p>Üdv! <b>A Prohardver lapcsalád oldalain egy Felhasználó <i>(az Üzemeltető előzetes írásbeli engedélye nélkül)</i> egy Felhasználói Fiókkal rendelkezhet, melyet más részére nem engedhet át!</b> Egyezést találtunk xxxxxx fiókkal. Ezért érdeklődnék, melyik fiókot szeretnéd megtartani?</p>'));
+                panel.appendChild(createFormattingButton('Pontosítás!', '<a href="http://#" target="_blank" rel="noopener"><b> Pontos típus, model? Privátba kérem!</b></a>'));
                 panel.appendChild(createFormattingButton('Árazhatatlan!', '<p><a href="http://#" target="_blank" rel="noopener"><b>Árazhatatlan! Összefoglaló szerint! Ne írj új hsz.-t, a pontos adatokat privátba kérem a módosításhoz!</b></a></p>'));
                 panel.appendChild(createFormattingButton('Összefoglaló!', '<p><a href="http://#" target="_blank" rel="noopener"><b>Légy oly kedves és az összefoglalót olvasd el, benne van amit nem szeretnénk látni a felvezetéskor és az is ahogyan szeretnénk!</b></a></p>'));
                 panel.appendChild(createFormattingButtonWithQuery('Beárazás vége',
@@ -90,9 +109,9 @@
                                                                   '<p class="tac"><b><i><code><tt><a href="%URL%" target="_blank" rel="noopener">%TITLE%</a></tt></code></i></b></p>'+
                                                                   '<p class="tac"><small>Az árak a hozzászólásaitokba vannak szerkesztve.</small></p>'+
                                                                   '<p></p>'+
-                                                                  '<p class="tac"><img src="https://prohardver.hu/dl/upc/2018-07/292543_llwynog.png" alt="" /></p>', 'Add meg a hosszászólás linkjét (URL)'));
-                panel.appendChild(createFormattingButton('Beárazva 2018', '<p class="tac"><img src="https://prohardver.hu/dl/upc/2018-07/292543_llwynog.png" /></p>'));
-                panel.appendChild(createFormattingButton('~Ár', '<a href="http://#" target="_blank" rel="noopener"><b>~<b class="_cursor">k</b></a>'));
+                                                                  '<p class="tac"><img src="https://prohardver.hu/dl/upc/2018-02/292543_jim_bcs_2.png" alt="" /></p>', 'Add meg a hosszászólás linkjét (URL)'));
+                panel.appendChild(createFormattingButton('Beárazva 2018', '<p class="tac"><img src="https://prohardver.hu/dl/upc/2018-02/292543_jim_bcs_2.png" /></p>'));
+                panel.appendChild(createFormattingButton('~Ár', '<a href="http://#" target="_blank" rel="noopener"><b> ~<b class="_cursor">k</b></a>'));
             }
         }
     }, 1000);
