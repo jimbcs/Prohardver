@@ -82,6 +82,7 @@
             if (!jimbcsmarker)
             {
                 panel.appendChild(createMarker());
+                panel.appendChild(createFormattingButton('Pontosítás!', '<a href="http://#" target="_blank" rel="noopener"><b> Pontos típus, model? Privátba kérem!</b></a>'));
                 panel.appendChild(createFormattingButton('Beárazva!', ' <p class="tac"><img src="https://prohardver.hu/dl/upc/2021-08/292543_pyttawrx.png" /></p>'));
                 panel.appendChild(createFormattingButton('~Ár', ' <a href="http://#" target="_blank" rel="noopener"><b>~k</b></a></p>'));
             }
