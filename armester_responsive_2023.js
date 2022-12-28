@@ -21,7 +21,7 @@ let buttons = [
     {title: 'Pecsét', content: '<p><img src="https://prohardver.hu/dl/upc/2018-04/292543_245114_jimbcs_pecset_75x75_2.png" alt="" /></p>'},
     {title: 'Szóköz', content: '<p><img src="https://prohardver.hu/dl/upc/2018-07/292543_194655_gray_line_3.jpg" alt="" /></p>'},
     {title: 'Nevezd meg', content: '<p><img src="https://prohardver.hu/dl/upc/2016-03/292543_dog_footprint-24.png" alt="" /> <b><i><a href="https://prohardver.hu/tema/re_ndruu_segits_kereshetove_tenni_a_ph-s_arckepek/hsz_1-50.html" target="_blank" rel="noopener">Nevezd meg az új arcképedet. Köszönjük!</a></i></b></p>'},
-    {title: 'Egyéni arc beáll', content: '<p><b><i>Egyéni arcképe beállításra került. – jim bcs – 2019.xx.xx.</i></b></p>'},
+    {title: 'Egyéni arc beáll', content: '<p><b><i>Egyéni arcképe beállításra került. – jim bcs – 2023.xx.xx.</i></b></p>'},
     {title: 'Klón', content: '<p>Üdv! <b>A Prohardver lapcsalád oldalain egy Felhasználó <i>(az Üzemeltető előzetes írásbeli engedélye nélkül)</i> egy Felhasználói Fiókkal rendelkezhet, melyet más részére nem engedhet át!</b> Egyezést találtunk xxxxxx fiókkal. Ezért érdeklődnék, melyik fiókot szeretnéd megtartani?</p>'},
     {title: 'Pontosítás', content: '<p><a href="http://#" target="_blank" rel="noopener"><b>Pontos típus, model? Privátba kérem!</b></a></p>'},
     {title: 'Árazhatatlan', content: '<p><a href="http://#" target="_blank" rel="noopener"><b>Árazhatatlan! Összefoglaló szerint! Ne írj új hsz.-t, a pontos adatokat privátba kérem a módosításhoz!</b></a></p>'},
