@@ -1,19 +1,12 @@
 // ==UserScript==
 // @name         Ármester Responsive for Kendek
 // @namespace    http://tampermonkey.net/
-// @version      1.1
+// @version      1.2
 // @description  Administration toolbar for Prohardver
 // @author       jim bcs, Kendek
-// @include      *prohardver.hu/tema*
-// @include      *mobilarena.hu/tema*
-// @include      *gamepod.hu/tema*
-// @include      *logout.hu/tema*
-// @include      *itcafe.hu/tema*
-// @include      *fototrend.hu/tema*
-// @include      /^http(s)?://(itcafe|prohardver|mobilarena|fototrend)\.hu/(tema|privat)/
-// @match        *://*/*
+// @include      /^https://(itcafe|prohardver|mobilarena|fototrend)\.hu/(tema|privat)/.*$/
 // @grant        none
-// @require      https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment-with-locales.min.js
+// @require      https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment-with-locales.min.js
 // ==/UserScript==
 
 let buttons = [
@@ -57,6 +50,7 @@ function createControls() {
 }
 
 (function() {
+    'use strict';
     let msgList = document.getElementsByClassName('msg-list')[2];
     if (msgList != undefined) {
         let list = msgList.getElementsByClassName('list-unstyled')[0];
