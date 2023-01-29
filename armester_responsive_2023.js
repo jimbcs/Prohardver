@@ -4,7 +4,7 @@
 // @version      1.2
 // @description  Administration toolbar for Prohardver
 // @author       jim bcs, Kendek
-// @include      /^https://(itcafe|prohardver|mobilarena|fototrend)\.hu/(tema|privat)/.*$/
+// @include      /^https://(itcafe|prohardver|mobilarena|fototrend|gamepod)\.hu/(tema|privat)/.*$/
 // @grant        none
 // @require      https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment-with-locales.min.js
 // ==/UserScript==
